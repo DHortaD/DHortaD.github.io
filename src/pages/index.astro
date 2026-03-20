@@ -10,48 +10,55 @@ const last_posts = posts.slice(0, 3);
 ---
 
 <BaseLayout sideBarActiveItemID="home">
-  <div class="pb-12 mt-5">
-    <div class="text-5xl font-bold">Danny Horta</div>
-    <div class="text-3xl py-3 font-bold">Marie Sklodowska-Curie Fellow</div>
+  <div class="pb-12 mt-5 bg-[#1E293B] border border-[#334155] p-10 rounded-2xl shadow-2xl">
+    <div class="text-5xl font-bold text-[#F8FAFC]">Danny Horta</div>
+    <div class="text-3xl py-3 font-bold text-[#38BDF8]">Marie Sklodowska-Curie Fellow</div>
     <div class="mt-8">
-    <ul class="icons">
-							<a href="https://github.com/DHortaD" class="icon brands style2 fa-github"><span class="label">Github</span></a>
-							<a href="https://ui.adsabs.harvard.edu/search/q=%20author%3A%22Horta%2C%20Danny%22&sort=date%20desc%2C%20bibcode%20desc&p_=0" class="fa fa-book"><span class="label">ADS</span></a>
+      <div class="flex gap-6">
+        <a href="https://github.com/DHortaD" target="_blank" class="text-[#38BDF8] hover:text-white transition-colors">
+          <i class="fa-brands fa-github fa-2x"></i>
+        </a>
+        <a href="https://ui.adsabs.harvard.edu/search/q=%20author%3A%22Horta%2C%20Danny%22&sort=date%20desc%2C%20bibcode%20desc&p_=0" target="_blank" class="text-[#38BDF8] hover:text-white transition-colors">
+          <i class="fa-solid fa-book fa-2x"></i>
+        </a>
+      </div>
     </div>
   </div>
 
-  <div>
-    <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
+  <div class="mt-12">
+    <div class="text-3xl w-full font-bold mb-6 text-[#F8FAFC]">My last projects {"</>"}</div>
   </div>
 
-  <HorizontalCard
-    title="The Milky Way's Circular Velocity Curve Measured Using Element Abundance Gradients"
-    img="/vc.png"
-    desc=""
-    url="https://ui.adsabs.harvard.edu/abs/2026ApJ..1000....8H/abstract"
-    badge="NEW"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Hydrostatic and explosive α-element chemical abundances of Milky Way globular clusters, halo substructures, and satellite galaxies"
-    img="/PeriodicTableOrigins2.jpg"
-    desc=""
-    url="https://ui.adsabs.harvard.edu/abs/2025MNRAS.544L..64H/abstract"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Lux: A Generative, Multioutput, Latent-variable Model for Astronomical Data with Noisy Labels"
-    img="/lux.png"
-    desc=""
-    url="https://ui.adsabs.harvard.edu/abs/2025AJ....169..314H/abstract"
-  />
-
-  <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
-  </div>
-  <div>
-In development
+  <div class="grid gap-4">
+    <HorizontalCard
+      title="The Milky Way's Circular Velocity Curve Measured Using Element Abundance Gradients"
+      img="/vc.png"
+      desc=""
+      url="https://ui.adsabs.harvard.edu/abs/2026ApJ..1000....8H/abstract"
+      badge="NEW"
+    />
+    <div class="divider border-[#334155] opacity-20 my-0"></div>
+    <HorizontalCard
+      title="Hydrostatic and explosive α-element chemical abundances of Milky Way globular clusters, halo substructures, and satellite galaxies"
+      img="/PeriodicTableOrigins2.jpg"
+      desc=""
+      url="https://ui.adsabs.harvard.edu/abs/2025MNRAS.544L..64H/abstract"
+    />
+    <div class="divider border-[#334155] opacity-20 my-0"></div>
+    <HorizontalCard
+      title="Lux: A Generative, Multioutput, Latent-variable Model for Astronomical Data with Noisy Labels"
+      img="/lux.png"
+      desc=""
+      url="https://ui.adsabs.harvard.edu/abs/2025AJ....169..314H/abstract"
+    />
   </div>
 
+  <div>
+    <div class="text-3xl w-full font-bold mb-5 mt-14 text-[#F8FAFC]">Latest from blog</div>
+  </div>
+  
+  <div class="bg-[#1E293B] border border-[#334155] p-6 rounded-xl text-slate-400 italic">
+    In development
+  </div>
 
 </BaseLayout>
