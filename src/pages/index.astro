@@ -11,14 +11,15 @@ const last_posts = posts.slice(0, 3);
 
 <BaseLayout sideBarActiveItemID="home">
   <div class="pb-12 mt-5">
-    <div class="text-xl py-1">Hey there 👋</div>
-    <div class="text-5xl font-bold">I'm Danny Horta</div>
-    <div class="text-3xl py-3 font-bold">Marie Sklodowska-Curie Fellow as the University of Edinburgh</div>
+%    <div class="text-xl py-1">Hola!</div>
+    <div class="text-5xl font-bold">Danny Horta</div>
+    <div class="text-3xl py-3 font-bold">Marie Sklodowska-Curie Fellow</div>
     <div class="mt-8">
-      <a class="btn" href="https://twitter.com/manuelernestog" target="_blank"> Let's connect!</a>
-      <a href="https://github.com/manuelernestog/astrofy" target="_blank" class="btn btn-outline ml-5">
-        Get This template
-      </a>
+    <ul class="icons">
+							<a href="https://github.com/DHortaD" class="icon brands style2 fa-github"><span class="label">Github</span></a>
+
+							<a href="https://scholar.google.com/citations?user=84puLdYAAAAJ&hl=en" class="fas fa-graduation-cap"><span class="label"></span></a>
+							<a href="https://ui.adsabs.harvard.edu/search/q=%20author%3A%22Horta%2C%20Danny%22&sort=date%20desc%2C%20bibcode%20desc&p_=0" class="fa fa-book"><span class="label"></span></a>
     </div>
   </div>
 
@@ -27,45 +28,30 @@ const last_posts = posts.slice(0, 3);
   </div>
 
   <HorizontalCard
-    title="Demo Project 1"
+    title="Orbital Torus Imaging"
     img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
+    desc="The Milky Way's Circular Velocity Curve Measured Using Element Abundance Gradients"
+    url="https://ui.adsabs.harvard.edu/abs/2026ApJ..1000....8H/abstract"
     badge="NEW"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 2"
+    title="Chemical differences in Milky Way populations"
     img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
+    desc="Hydrostatic and explosive α-element chemical abundances of Milky Way globular clusters, halo substructures, and satellite galaxies"
+    url="https://ui.adsabs.harvard.edu/abs/2025MNRAS.544L..64H/abstract"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 3"
+    title="Lux"
     img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="FOSS"
+    desc="A Generative, Multioutput, Latent-variable Model for Astronomical Data with Noisy Labels"
+    url="https://ui.adsabs.harvard.edu/abs/2025AJ....169..314H/abstract"
   />
 
   <div>
     <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
   </div>
 
-  {
-    last_posts.map((post) => (
-      <>
-        <HorizontalCard
-          title={post.data.title}
-          img={post.data.heroImage}
-          desc={post.data.description}
-          url={"/blog/" + createSlug(post.data.title, post.slug)}
-          target="_self"
-          badge={post.data.badge}
-        />
-        <div class="divider my-0" />
-      </>
-    ))
-  }
+
 </BaseLayout>
