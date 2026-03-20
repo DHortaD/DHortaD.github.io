@@ -1,16 +1,17 @@
 ---
 const { sideBarActiveItemID } = Astro.props;
-const activeClass = "bg-base-300"; // For primary color replace with `active` class
+// We change activeClass to use your Sage accent color with dark text for contrast
+const activeClass = "bg-[#A3C6C4] text-[#354649] font-bold"; 
 ---
 
 <ul class="menu grow shrink menu-md overflow-y-auto">
-    <li><a class="py-3 text-base" id="home" href="/">Home</a></li>
-    <li><a class="py-3 text-base" id="projects" href="/projects">Projects</a></li>
-    <li><a class="py-3 text-base" id="blog" href="/blog/">Blog</a></li>
-    <li><a class="py-3 text-base" id="cv" href="/cv">CV</a></li>
+    <li><a class="py-3 text-base hover:bg-[#A3C6C4] hover:text-[#354649] transition-all" id="home" href="/">Home</a></li>
+    <li><a class="py-3 text-base hover:bg-[#A3C6C4] hover:text-[#354649] transition-all" id="projects" href="/projects">Projects</a></li>
+    <li><a class="py-3 text-base hover:bg-[#A3C6C4] hover:text-[#354649] transition-all" id="blog" href="/blog/">Blog</a></li>
+    <li><a class="py-3 text-base hover:bg-[#A3C6C4] hover:text-[#354649] transition-all" id="cv" href="/cv">CV</a></li>
     <li>
         <a
-            class="py-3 text-base"
+            class="py-3 text-base hover:bg-[#A3C6C4] hover:text-[#354649] transition-all"
             href="mailto:dhorta@roe.ac.uk"
             target="_blank"
             referrerpolicy="no-referrer-when-downgrade">Contact</a
@@ -20,5 +21,16 @@ const activeClass = "bg-base-300"; // For primary color replace with `active` cl
 
 <script define:vars={{ sideBarActiveItemID: sideBarActiveItemID, activeClass: activeClass }}>
 const activeItemElem = document.getElementById(sideBarActiveItemID);
-activeItemElem && activeItemElem.classList.add(activeClass);
+if (activeItemElem) {
+    // We split the classes to ensure they are added correctly via JavaScript
+    activeClass.split(' ').forEach(cls => activeItemElem.classList.add(cls));
+}
 </script>
+
+<style>
+    /* This ensures that even if the template has default colors, 
+       your menu links follow the Harbor palette */
+    .menu a {
+        color: #E0E7E9; /* Off-white by default in sidebar */
+    }
+</style>
