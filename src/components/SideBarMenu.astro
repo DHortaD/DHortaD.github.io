@@ -1,17 +1,29 @@
 ---
 const { sideBarActiveItemID } = Astro.props;
-// We change activeClass to use your Sage accent color with dark text for contrast
-const activeClass = "bg-[#A3C6C4] text-[#354649] font-bold"; 
+/** * DEEP SPACE NAVY THEME:
+ * Active Background: Electric Blue (#38BDF8)
+ * Active Text: Deep Navy (#0F172A) for contrast
+ * Hover State: Fades into the Electric Blue
+ */
+const activeClass = "bg-[#38BDF8] text-[#0F172A] font-bold shadow-[0_0_15px_rgba(56,189,248,0.4)]"; 
 ---
 
 <ul class="menu grow shrink menu-md overflow-y-auto">
-    <li><a class="py-3 text-base hover:bg-[#A3C6C4] hover:text-[#354649] transition-all" id="home" href="/">Home</a></li>
-    <li><a class="py-3 text-base hover:bg-[#A3C6C4] hover:text-[#354649] transition-all" id="projects" href="/projects">Projects</a></li>
-    <li><a class="py-3 text-base hover:bg-[#A3C6C4] hover:text-[#354649] transition-all" id="blog" href="/blog/">Blog</a></li>
-    <li><a class="py-3 text-base hover:bg-[#A3C6C4] hover:text-[#354649] transition-all" id="cv" href="/cv">CV</a></li>
+    <li>
+        <a class="py-3 text-base hover:bg-[#38BDF8] hover:text-[#0F172A] transition-all" id="home" href="/">Home</a>
+    </li>
+    <li>
+        <a class="py-3 text-base hover:bg-[#38BDF8] hover:text-[#0F172A] transition-all" id="projects" href="/projects">Projects</a>
+    </li>
+    <li>
+        <a class="py-3 text-base hover:bg-[#38BDF8] hover:text-[#0F172A] transition-all" id="blog" href="/blog/">Blog</a>
+    </li>
+    <li>
+        <a class="py-3 text-base hover:bg-[#38BDF8] hover:text-[#0F172A] transition-all" id="cv" href="/cv">CV</a>
+    </li>
     <li>
         <a
-            class="py-3 text-base hover:bg-[#A3C6C4] hover:text-[#354649] transition-all"
+            class="py-3 text-base hover:bg-[#38BDF8] hover:text-[#0F172A] transition-all"
             href="mailto:dhorta@roe.ac.uk"
             target="_blank"
             referrerpolicy="no-referrer-when-downgrade">Contact</a
@@ -22,15 +34,24 @@ const activeClass = "bg-[#A3C6C4] text-[#354649] font-bold";
 <script define:vars={{ sideBarActiveItemID: sideBarActiveItemID, activeClass: activeClass }}>
 const activeItemElem = document.getElementById(sideBarActiveItemID);
 if (activeItemElem) {
-    // We split the classes to ensure they are added correctly via JavaScript
+    // Splits the classes to ensure Tailwind applies them correctly via JS
     activeClass.split(' ').forEach(cls => activeItemElem.classList.add(cls));
 }
 </script>
 
 <style>
-    /* This ensures that even if the template has default colors, 
-       your menu links follow the Harbor palette */
+    /* Default link color: Crisp Starlight White */
     .menu a {
-        color: #E0E7E9; /* Off-white by default in sidebar */
+        color: #F8FAFC; 
+    }
+
+    /* Ensures the text stays dark when the background turns Blue on hover */
+    .menu a:hover {
+        color: #0F172A !important;
+    }
+
+    /* Smooth transition for the glow and color shifts */
+    .menu a {
+        transition: all 0.2s ease-in-out;
     }
 </style>
