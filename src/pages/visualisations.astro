@@ -1,0 +1,80 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Visualisations" sideBarActiveItemID="services">
+
+  <!-- Page header -->
+  <div class="mb-6">
+    <div class="text-3xl w-full font-bold mb-3">Visualisations</div>
+    <p class="text-base-content/70 text-sm leading-relaxed max-w-2xl">
+      The following visualisations and movies are free to use under the
+      <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" class="link link-primary">CC-BY-SA license</a>.
+      If you use these, please <strong>(1)</strong> acknowledge <em>D. Horta</em> and
+      <strong>(2)</strong> carry this license along if you re-distribute any material.
+    </p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Section -->
+  <section class="mb-12">
+    <h2 class="text-xl font-bold mb-2">Assembly history of a Milky Way-mass galaxy</h2>
+    <p class="text-base-content/80 text-sm leading-relaxed mb-6 max-w-2xl">
+      The two animations below were created using the FIRE-2 cosmological simulations (m12m).
+      They show star particles belonging to different "building-blocks" — accreted satellite galaxies
+      consumed by a Milky Way-mass host — as a function of cosmic time.
+      Each merger is shown in a distinct colour.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <!-- Card 1 -->
+      <div class="card bg-base-200 shadow-md">
+        <figure class="px-4 pt-4">
+          <img
+            src="/XZ-mergers-m12m.gif"
+            alt="Spatial (X-Z) distribution of accreted galaxies over time"
+            class="rounded-lg w-full object-contain"
+          />
+        </figure>
+        <div class="card-body pt-3 pb-4 px-4">
+          <h3 class="card-title text-sm font-semibold">Spatial coordinates (X–Z)</h3>
+          <p class="text-xs text-base-content/70 leading-relaxed">
+            Star particles shown in the X–Z plane, centred on the host Milky Way-mass halo.
+          </p>
+          <div class="card-actions justify-end mt-2">
+            <a href="/XZ-mergers-m12m.gif" download class="btn btn-xs btn-outline">
+              ↓ Download
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card bg-base-200 shadow-md">
+        <figure class="px-4 pt-4">
+          <img
+            src="/ELz-mergers-m12m.gif"
+            alt="Energy–angular momentum diagram of accreted galaxies over time"
+            class="rounded-lg w-full object-contain"
+          />
+        </figure>
+        <div class="card-body pt-3 pb-4 px-4">
+          <h3 class="card-title text-sm font-semibold">Energy–angular momentum (E–L<sub>z</sub>)</h3>
+          <p class="text-xs text-base-content/70 leading-relaxed">
+            The same mergers in the E–L<sub>z</sub> diagram, the space dynamicists use to
+            identify distinct accretion events.
+          </p>
+          <div class="card-actions justify-end mt-2">
+            <a href="/ELz-mergers-m12m.gif" download class="btn btn-xs btn-outline">
+              ↓ Download
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</BaseLayout>

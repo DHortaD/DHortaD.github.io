@@ -1,0 +1,75 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+---
+
+<BaseLayout title="Resume" sideBarActiveItemID="cv">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Profile</div>
+  </div>
+
+  <div class="mb-10 text-justify">
+    Marie Curie research fellow in astrophysics at the Royal Observatory of Edinburgh (Scotland)
+    working on applying novel statistical and machine learning techniques to the latest observational and simulation big data
+    to solve fundamental questions in Galactic astrophysics.
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Education</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="2018-2022: PhD (Astrophysics)"
+      subtitle="Liverpool John Moores University"
+    />
+    <TimeLineElement
+      title="2014-2018: MPhys (Physics with Astrophysics)"
+      subtitle="Northumbria University (Newcastle)"
+    />
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Employment</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="2025-Present: Marie Skłodowska-Curie Fellow"
+      subtitle="Royal Observatory of Edinburgh/University of Edinburgh"
+    >
+    </TimeLineElement>
+    <TimeLineElement
+      title="2022-2025: Flatiron Research Fellow"
+      subtitle="Center for Computational Astrophysics/Flatiron Institute"
+    >
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Awards</div>
+  </div>
+
+  <ul class="list-disc mx-6 mb-10 grid gap-2">
+    <li>
+      <a href="#" target="_blank"> 2022: IAU best PhD prize, division J of galaxies and cosmology</a>
+    </li>
+    <li>
+      <a href="#" target="_blank"> 2022: LJMU best PhD prize</a>
+    </li>
+  </ul>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">CV</div>
+  </div>
+
+  <ul class="list-disc mx-6 mb-10 grid gap-2">
+    <li>
+      <a href="https://github.com/DHortaD/CV/blob/master/CV_DH.pdf" target="_blank"> My full academic CV can be found <u>here</u></a>
+    </li>
+    <li>
+      <a href="https://github.com/DHortaD/CV/blob/master/DH-CV-industry.pdf" target="_blank"> My 2-page industry CV can be found <u>here</u></a>
+    </li>
+  </div>
+
+
+</BaseLayout>
