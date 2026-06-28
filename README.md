@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Astrofy | Personal Portfolio Website Template
 
 ![Astrofy | Personal Porfolio Website Template](public/social_img.webp)
@@ -287,3 +288,7 @@ Astrofy is licensed under the MIT license — see the [LICENSE](https://github.c
 </a>
 
 Made with [contrib.rocks](https://contrib.rocks).
+=======
+# DHortaD.github.io
+new webpage
+>>>>>>> c22973704af77ccb96f9e9fb10994eceffdb8a35
